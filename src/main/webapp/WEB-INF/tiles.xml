@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <!-- USER -->
+    <definition name="baseLayout" template="/WEB-INF/layout/base.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+    </definition>
+
+
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="Trang chu" />
+        <put-attribute name="content" value="/WEB-INF/jsp/index.jsp" />
+    </definition>
+    <definition name="tour-list" extends="baseLayout">
+        <put-attribute name="title" value="Danh sách các tour" />
+        <put-attribute name="content" value="/WEB-INF/jsp/tour-list.jsp" />
+    </definition>
+    <definition name="login" extends="baseLayout">
+        <put-attribute name="header" value="" />
+        <put-attribute name="title" value="Login" />
+        <put-attribute name="content" value="/WEB-INF/jsp/login.jsp" />
+        <put-attribute name="footer" value="" />
+    </definition>
+    <definition name="register" extends="baseLayout">
+        <put-attribute name="title" value="Register" />
+        <put-attribute name="content" value="/WEB-INF/jsp/register.jsp" />
+    </definition>
+    <definition name="info-user" extends="baseLayout">
+        <put-attribute name="title" value="Thông tin tài khoản" />
+        <put-attribute name="content" value="/WEB-INF/jsp/update-user.jsp" />
+    </definition>
+    <definition name="tour-detail" extends="baseLayout">
+        <put-attribute name="title" value="Thông tin tour" />
+        <put-attribute name="content" value="/WEB-INF/jsp/tour-detail.jsp" />
+    </definition>
+    <definition name="cart" extends="baseLayout">
+        <put-attribute name="title" value="Tour đặt" />
+        <put-attribute name="content" value="/WEB-INF/jsp/cart.jsp" />
+    </definition>
+
+    <!-- ADMIN -->
+
+    <definition name="adminLayout" template="/WEB-INF/layout/admin/admin-layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/layout/admin/header.jsp" />
+        <put-attribute name="title" value="" />
+        <put-attribute name="navbar" value="/WEB-INF/layout/admin/navbar.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="/WEB-INF/layout/admin/footer.jsp" />
+    </definition>
+    
+    <definition name="admin-index" extends="adminLayout">
+        <put-attribute name="title" value="Trang chủ Quản trị" />
+        <put-attribute name="content" value="/WEB-INF/layout/admin/content.jsp" />
+    </definition>
+
+    <definition name="tour-manager" extends="adminLayout">
+        <put-attribute name="title" value="Quản lý Tour" />
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/tour-manager.jsp" />
+    </definition>
+    <definition name="add-tour" extends="adminLayout">
+        <put-attribute name="title" value="Thêm Tour" />
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/add-tour.jsp" />
+    </definition>
+    <definition name="update-tour" extends="adminLayout">
+        <put-attribute name="title" value="Sửa Tour" />
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/update-tour.jsp" />
+    </definition>
+
+    <definition name="user-manager" extends="adminLayout">
+        <put-attribute name="title" value="Quản lý Tài khoản" />
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/user-manager.jsp" />
+    </definition>
+    <definition name="order-manager" extends="adminLayout">
+        <put-attribute name="title" value="Quản lý đặt tour" />
+        <put-attribute name="content" value="/WEB-INF/jsp/admin/order-manager.jsp" />
+    </definition>
+    <definition name="add-user" extends="adminLayout">
+        <put-attribute name="title" value="Thêm nhân viên" />
+        <put-attribute name="content" value="/WEB-INF/jsp/register.jsp" />
+    </definition>
+    <definition name="update-user" extends="adminLayout">
+        <put-attribute name="title" value="Thông tin tài khoản" />
+        <put-attribute name="content" value="/WEB-INF/jsp/update-user.jsp" />
+    </definition>
+
+</tiles-definitions>
